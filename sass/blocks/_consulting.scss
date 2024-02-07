@@ -1,0 +1,89 @@
+.info {
+    padding-top: 30px;
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            font-size: 40px;
+            color: #E75D14;
+        }
+        &-descr {
+            margin-left: 20px;
+            width: 80%;
+        }
+    }
+}
+.consulting{ 
+    &-title {
+        padding-top: 80px;
+        text-align: center;
+    }
+    &-descr {
+        margin-top: 40px;
+        font-weight: 300;
+        font-size: 20px;
+        span {
+            font-weight: 700;
+        }
+        ul {
+            margin-top: 15px;
+        }
+    }
+}
+.advantages {
+    padding-top: 80px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &-title {
+        font-size: 25px;
+        font-weight: 300;
+        cursor: pointer;
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-active {
+            font-weight: 700;
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+        }
+        &-divider {
+            width: 100%;
+            height: 1px;
+            background-color: lightgray;
+            margin-top: 10px;
+            border-radius: 10px;
+            &-active {
+                background-color: #E75D14;
+                height: 4px;
+            }
+        }
+    }
+    &-item {
+        width: 415px;
+        &-title {
+            font-weight: 700;
+            font-size: 20px;
+            i {
+                color: #E75D14;
+                margin-right: 20px;
+            }
+        }
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 70px;
+            justify-content: center;
+            margin: 50px 0px;
+        }
+        &-text {
+            padding-left: 42px;
+            font-weight: 300;
+        }
+    }
+}

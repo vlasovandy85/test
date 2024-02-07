@@ -1,0 +1,309 @@
+@media (max-width: 1200px){
+	.questions {
+		&-item {
+			&-title {
+				font-size: 18px;
+			}
+		}
+	}
+	.review {
+		.carousel {
+			height: 850px;
+			&-item {
+				height: 850px;
+			}
+		}
+	}
+	.footer {
+		&-wrapper {
+			height: 350px;
+			gap: 50px;
+		}
+		&-left {
+			&-text {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px){
+	.nav {
+		nav {
+			height: 125px;
+		}
+		&-center {
+			display: none;
+		}
+	}
+	.main {
+		&-container {
+			padding: 40px;
+		}
+		h1 {
+			width: 100%;
+		}
+		&-people {
+			width: 95%;
+		}
+	}
+	.services {
+		&-item {
+			width: 300px;
+			height: 280px;
+		}
+	}
+	.about {
+		&-wrapper {
+			padding: 20px;
+		}
+		&-person {
+			left: -95px;
+		}
+	}
+	.advantages {
+		&-title {
+			text-align: center;
+		}
+	}
+	.questions {
+		&-item {
+			&-title {
+				width: 80%;
+			}
+		}
+	}
+	.footer {
+		&-wrapper {
+			height: 300px;
+		}
+		&-left {
+			justify-content: center;
+			width: 50%;
+			&-text {
+				font-size: 17px;
+			}
+		}
+		&-logo {
+			display: none;
+		}
+		&-right {
+			width: 50%;
+			justify-content: center;
+			align-items: center;
+			margin-top: 0;
+			ul {
+				li {
+					font-size: 20px;
+				}
+			}
+			&-item2 {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 820px){
+	.request {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px){
+	.phone {
+		display: none;
+	}
+	.main {
+		height: 565px;
+		&-container {
+			height: 565px;
+		}
+		h1 {
+			font-size: 25px;
+		}
+		&-vector2 {
+			width: 400px;
+		}
+	}
+	.about {
+		&-experience {
+			width: 450px;
+		}
+	}
+	.advantages {
+		&-title {
+			&-wrapper {
+				flex-direction: column;
+				gap: 30px;
+			}
+		}
+	}
+	.review {
+		.carousel {
+			height: 700px;
+			&-item {
+				height: 700px;
+			}
+		}
+	}
+	.footer {
+		&-wrapper {
+			padding: 30px;
+			height: 250px;
+		}
+		&-left {
+			&-phone {
+				font-size: 23px;
+			}
+		}
+		&-right {
+			ul {
+				li {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.main {
+		&-container {
+			padding: 20px;
+		}
+		&-vector2 {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+    .request {
+        .container {
+            width: 100%;
+            padding: 0;
+			margin-top: 40px;
+        }
+		&-close {
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			right: 0;
+			width: 30px;
+		}
+        &-form {
+            width: 270px;
+            padding: 0 10px;
+            &-item {
+                width: 100%;
+                label {
+                    font-size: 12px;
+                }
+            }
+            &-prev, &-next, .main-btn {
+                font-size: 12px;
+            }
+        }
+    }
+	.questions {
+		&-item {
+			&-title {
+				font-size: 16px;
+			}
+		}
+	}
+	.footer {
+		.container {
+			padding: 0;
+		}
+	}
+}
+
+@media (max-width: 527px){
+	.footer {
+		&-left {
+			&-phone {
+				font-size: 13px;
+			}
+			&-button {
+				width: 100%;
+				font-size: 13px;
+			}
+			&-text {
+				font-size: 10px;
+			}
+		}
+		&-right {
+			ul {
+				li {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.about {
+		&-experience {
+			width: 100%;
+		}
+	}
+	.consulting {
+		&-descr {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 450px){
+	.main {
+		height: 460px;
+		&-container {
+			height: 460px;
+		}
+		h1 {
+			font-size: 20px;
+		}
+	}
+	.advantages {
+		&-item {
+			&-title{
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px){
+	.nav {
+		&-left {
+			&-phone {
+				font-size: 20px;
+			}
+			&-button {
+				font-size: 16px;
+			}
+		}
+	}
+	.questions {
+		&-item {
+			&-title {
+				font-size: 13px;
+			}
+		}
+	}
+	.footer {
+	   &-wrapper {
+		gap: 20px;
+		padding: 5px;
+	   }
+	   &-right {
+		&-title {
+			text-align: center;
+		}
+	   }
+	}
+}

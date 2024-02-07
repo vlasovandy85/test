@@ -1,0 +1,48 @@
+.contacts {
+    margin-top: 50px;
+    &-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 320px;
+        background: linear-gradient(180deg, #ECE5D8 0%, #ECE5D8A3 100%);
+        border-radius: 10px;
+        padding: 10px;
+        &-title {
+            display: flex;
+            gap: 30px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        &-text {
+            font-size: 20px;
+            font-weight: 500;
+            color: #E75D14;
+            text-align: center;
+        }
+        &-social {
+            display: flex;
+            gap: 20px;
+            i {
+                color: #E75D14;
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}

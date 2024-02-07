@@ -1,0 +1,95 @@
+const navRight = document.querySelector('.nav-right'),
+      hambureger = document.querySelector('.ham'),
+      navRightList = document.querySelector('.nav-right-list'),
+      body = document.querySelector('body'),
+      mask = document.querySelector('.mask'),
+      requestStepTitles = ['Общее даные', 'Укажите сумму ваших долгов', 'Какое имущество у вас имеется?', 'Сколько времени вы не оплачиваете долги?', 'У вас есть действующая ипотека или автокредит?', 'У вас есть обязательства по выплате алиментов?'],
+      requestStepTitle = document.querySelector('.request-step-title');
+
+navRight.addEventListener('click', () => {
+    navRight.classList.toggle('nav-right-active');
+    hambureger.classList.toggle('active');
+    navRightList.classList.toggle('d-none');
+    body.classList.toggle('overflow-hidden');
+    mask.classList.toggle('d-none');
+})
+
+function singleChoise(index) {
+    const checkBox = document.querySelectorAll(`.cbx-${index}`);
+  
+    checkBox.forEach(checkbox => {
+      checkbox.addEventListener('click', function() {
+        checkBox.forEach(checkbox => {
+          checkbox.checked = false
+        })
+        this.checked = true
+      })
+    })
+  }
+  singleChoise(12);
+  singleChoise(13);
+  singleChoise(14);
+  singleChoise(15);
+  
+  
+  
+  const formItem = document.querySelectorAll('.request-form-item');
+  const nextStepRequest = document.querySelectorAll('.request-form-next');
+  const prevStepRequest = document.querySelectorAll('.request-form-prev');
+  const stepHTML = document.querySelector('.request-step');
+  const requestClose = document.querySelector('.request-close');
+  
+  
+  for(let i = 0; i < formItem.length - 1; i++) {
+    nextStepRequest[i].addEventListener('click', function() {
+      if(i === 0 && formItem[i].querySelectorAll('input')[0].value.length > 0 && formItem[i].querySelectorAll('input')[1].value.length > 0) {
+        formItem[i].classList.add('d-none');
+        formItem[i + 1].classList.remove('d-none')
+        stepHTML.innerText = i + 2;
+      }
+      const cbx = Array.from(formItem[i].querySelectorAll('.cbx input'));
+      if((i === 1 || i === 2 || i === 3 || i === 4) && cbx.some(item => item.checked)) {
+        formItem[i].classList.add('d-none');
+        formItem[i + 1].classList.remove('d-none')
+        stepHTML.innerText = +stepHTML.innerText + 1;
+      }
+    })
+  }
+  
+  for(let i = 1; i < formItem.length; i++) {
+    prevStepRequest[i - 1].addEventListener('click', function() {
+      stepHTML.innerText = +stepHTML.innerText - 1;
+      formItem[i].classList.add('d-none');
+      formItem[i - 1].classList.remove('d-none')
+    })
+  }
+  
+  $(document).ready(function () {
+    $('#phone').inputmask('+7 (999) 999-99-99');
+  });
+  
+  
+  const cbx15 = document.querySelectorAll('.cbx-15');
+  const sendBtn = document.querySelector('.send-btn');
+  
+  cbx15.forEach(checkbox => {
+    checkbox.addEventListener('click', function() {
+      sendBtn.disabled = false
+    })
+  })
+
+function toggleRequest() {
+    const request = document.querySelector('.request');
+    request.classList.toggle('d-none');
+    mask.classList.toggle('d-none');
+    body.classList.toggle('overflow-hidden');
+}
+
+requestClose.addEventListener('click', toggleRequest);
+
+
+const phoneIcon = document.querySelector('.phone-icon');
+
+setInterval(() => {
+    phoneIcon.classList.toggle('fa-shake');
+}, 2900)
