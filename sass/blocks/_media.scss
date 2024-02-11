@@ -1,4 +1,14 @@
 @media (max-width: 1200px){
+	.nav {
+		&-center {
+			&-callback {
+				display: none;
+			}
+			&-social {
+				margin-left: -60px;
+			}
+		}
+	}
 	.questions {
 		&-item {
 			&-title {
@@ -14,26 +24,24 @@
 			}
 		}
 	}
-	.footer {
-		&-wrapper {
-			height: 350px;
-			gap: 50px;
-		}
-		&-left {
-			&-text {
-				text-align: center;
-			}
-		}
-	}
 }
 
 @media (max-width: 992px){
 	.nav {
-		nav {
-			height: 125px;
+		&-top {
+			display: none;
 		}
 		&-center {
 			display: none;
+		}
+		&-bottom {
+			display: none;
+		}
+		&-divider {
+			display: none;
+		}
+		&-mobile {
+			display: flex;
 		}
 	}
 	.main {
@@ -75,30 +83,28 @@
 	}
 	.footer {
 		&-wrapper {
-			height: 300px;
-		}
-		&-left {
-			justify-content: center;
-			width: 50%;
-			&-text {
-				font-size: 17px;
-			}
+			height: 225px;
 		}
 		&-logo {
-			display: none;
+			width: 250px;
+		}
+		&-left {
+			width: 30%;
+			&-phone {
+				font-size: 20px;
+			}
+		}
+		&-center {
+			&-title {
+				font-size: 20px;
+			}
+			&-button {
+				font-size: 15px;
+			}
 		}
 		&-right {
-			width: 50%;
-			justify-content: center;
-			align-items: center;
-			margin-top: 0;
-			ul {
-				li {
-					font-size: 20px;
-				}
-			}
-			&-item2 {
-				display: none;
+			&-title {
+				font-size: 20px;
 			}
 		}
 	}
@@ -111,19 +117,32 @@
 }
 
 @media (max-width: 768px){
+	.nav {
+		&-mobile {
+			&-menu {
+				&-active {
+					width: 80%;
+				}
+			}
+			&-phone {
+				display: none;
+			}
+		}
+	}
 	.phone {
 		display: none;
 	}
 	.main {
 		height: 565px;
 		&-container {
+			padding: 20px;
 			height: 565px;
 		}
 		h1 {
 			font-size: 25px;
 		}
 		&-vector2 {
-			width: 400px;
+			width: 100%;
 		}
 	}
 	.about {
@@ -148,37 +167,25 @@
 		}
 	}
 	.footer {
-		&-wrapper {
-			padding: 30px;
-			height: 250px;
-		}
 		&-left {
-			&-phone {
-				font-size: 23px;
-			}
+			width: 50%;
 		}
-		&-right {
-			ul {
-				li {
-					font-size: 18px;
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: 768px){
-	.main {
-		&-container {
-			padding: 20px;
-		}
-		&-vector2 {
-			width: 100%;
+		&-center {
+			display: none;
 		}
 	}
 }
 
 @media (max-width: 576px) {
+	.nav {
+		&-mobile {
+			&-menu {
+				&-active {
+					width: 100%;
+				}
+			}
+		}
+	}
     .request {
         .container {
             width: 100%;
@@ -215,29 +222,34 @@
 	}
 	.footer {
 		.container {
-			padding: 0;
+			padding: 10px;
 		}
 	}
 }
 
 @media (max-width: 527px){
 	.footer {
+		&-wrapper {
+			height: 180px;
+			gap: 20px;
+		}
 		&-left {
 			&-phone {
-				font-size: 13px;
-			}
-			&-button {
-				width: 100%;
-				font-size: 13px;
+				font-size: 18px;
 			}
 			&-text {
-				font-size: 10px;
+				font-size: 13px;
 			}
 		}
 		&-right {
+			width: 30%;
+			gap: 10px;
 			ul {
 				li {
-					font-size: 13px;
+					line-height: 15px;
+					a {
+						font-size: 13px;
+					}
 				}
 			}
 		}
@@ -259,6 +271,19 @@
 }
 
 @media (max-width: 450px){
+	.nav {
+		&-mobile {
+			&-logo {
+				width: 250px;
+			}
+			&-menu {
+				&-btns-wrapper {
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+		}
+	}
 	.main {
 		height: 460px;
 		&-container {
@@ -278,16 +303,6 @@
 }
 
 @media (max-width: 400px){
-	.nav {
-		&-left {
-			&-phone {
-				font-size: 20px;
-			}
-			&-button {
-				font-size: 16px;
-			}
-		}
-	}
 	.questions {
 		&-item {
 			&-title {
@@ -296,14 +311,25 @@
 		}
 	}
 	.footer {
-	   &-wrapper {
-		gap: 20px;
-		padding: 5px;
-	   }
-	   &-right {
-		&-title {
-			text-align: center;
+		&-logo {
+			width: 200px;
 		}
-	   }
+		&-left {
+			&-phone {
+				font-size: 16px;
+			}
+			&-text {
+				font-size: 12px;
+			}
+		}
+		&-right {
+			ul {
+				li {
+					a {
+						font-size: 10px;
+					}
+				}
+			}
+		}
 	}
 }

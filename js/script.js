@@ -1,18 +1,10 @@
-const navRight = document.querySelector('.nav-right'),
-      hambureger = document.querySelector('.ham'),
-      navRightList = document.querySelector('.nav-right-list'),
-      body = document.querySelector('body'),
+const body = document.querySelector('body'),
       mask = document.querySelector('.mask'),
       requestStepTitles = ['Общее даные', 'Укажите сумму ваших долгов', 'Какое имущество у вас имеется?', 'Сколько времени вы не оплачиваете долги?', 'У вас есть действующая ипотека или автокредит?', 'У вас есть обязательства по выплате алиментов?'],
-      requestStepTitle = document.querySelector('.request-step-title');
+      requestStepTitle = document.querySelector('.request-step-title'),
+      hamburger = document.querySelector('.ham'),
+      navMobileMenu = document.querySelector('.nav-mobile-menu');
 
-navRight.addEventListener('click', () => {
-    navRight.classList.toggle('nav-right-active');
-    hambureger.classList.toggle('active');
-    navRightList.classList.toggle('d-none');
-    body.classList.toggle('overflow-hidden');
-    mask.classList.toggle('d-none');
-})
 
 function singleChoise(index) {
     const checkBox = document.querySelectorAll(`.cbx-${index}`);
@@ -85,6 +77,13 @@ function toggleRequest() {
     body.classList.toggle('overflow-hidden');
 }
 
+function menuToggleRequest() {
+  const request = document.querySelector('.request');
+  request.classList.toggle('d-none');
+  navMobileMenu.classList.toggle('nav-mobile-menu-active');
+  hamburger.classList.toggle('active');
+}
+
 requestClose.addEventListener('click', toggleRequest);
 
 
@@ -93,3 +92,9 @@ const phoneIcon = document.querySelector('.phone-icon');
 setInterval(() => {
     phoneIcon.classList.toggle('fa-shake');
 }, 2900)
+
+hamburger.addEventListener('click', () => {
+    navMobileMenu.classList.toggle('nav-mobile-menu-active');
+    mask.classList.toggle('d-none');
+    body.classList.toggle('overflow-hidden');
+})
