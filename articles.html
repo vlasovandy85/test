@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Правовое Решение</title>
+    <title>Легкость Права</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -520,10 +520,10 @@
                         <a href="about.html">О нас</a>
                     </li>
                     <li>
-                        <a href="#">Стоимость услуг</a>
+                        <a href="price.html">Стоимость услуг</a>
                     </li>
                     <li>
-                        <a href="#">Контакты</a>
+                        <a href="contacts.html">Контакты</a>
                     </li>
                     <li>
                         <a href="#">Статьи</a>
@@ -644,13 +644,13 @@
                         <a href="about.html">О нас</a>
                     </li>
                     <li>
-                        <a href="#">Стоимость услуг</a>
+                        <a href="price.html">Стоимость услуг</a>
                     </li>
                     <li>
                         <button class="nav-top-button" onclick="toggleRequest()">Оставить заявку</button>
                     </li>
                     <li>
-                        <a href="#">Контакты</a>
+                        <a href="contacts.html">Контакты</a>
                     </li>
                     <li>
                         <a href="#">Статьи</a>
@@ -764,158 +764,189 @@
             </div>
         </div>
     </nav>
-    <section class="info">
+    <section id="services" class="services">
         <div class="container">
-            <div class="info-item">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <div class="info-item-descr">Банкротство позволяет списать долги по налогам физ. лица на основании норм НК РФ. Процедура проходит в общем порядке. Непогашенные задолженности аннулируются, если арбитражный суд признает гражданина банкротом и начинает реализацию имущества.</div>
-            </div>
-        </div>
-    </section>    
-    <section class="consulting">
-        <div class="container">
-            <h2 class="consulting-title">МОЖНО ЛИ БАНКРОТСТВОМ СПИСАТЬ НАЛОГИ</h2>
-            <div class="consulting-descr">
-                Уплата налогов является обязанностью гражданина. Если он не смог погасить недоимки, то он вправе подать в суд на банкротство. Для этого ему нужно соответствовать условиям:
-                <br><br>
-                <ul>
-                    <li>Понимать, что у него не получится закрывать долги вовремя;</li>
-                    <li>Обладать признаками неплатежеспособности и (или) недостаточности имущества.</li>
-                </ul>
-                <span>Человек обязан подавать заявление на банкротство в суд, если:</span>
-                <ul>
-                    <li>Совокупный размер долгов от 500 000 рублей;</li>
-                    <li>Нет возможности полностью погасить все задолженности.</li>
-                </ul>
-                В такой ситуации, гражданину дается тридцать рабочих дней, чтобы подать заявление. Иначе наступит неприятное последствие в виде административной ответственности — на человека будет наложен штраф.
-                <br><br>
-                <span>Конечно, суд будет учитывать все возможные долги, образовавшиеся у физлица, то есть, не только основной долг и пеню по налогам и сборам, но и неисполненные обязательства по:</span>
-                <ul>
-                    <li>Кредитам перед банками и МФО;</li>
-                    <li>Коммунальным платежам;</li>
-                    <li>Судебным актам;</li>
-                    <li>Сделкам с гражданами.</li>
-                </ul>
-                В результате признания гражданина банкротом и введения реализации имущества будут погашены требования кредиторов. При этом закон предусматривает, что активы, указанные в статье 446 ГПК РФ, продаваться с молотка не будут. Если имущества должника не хватит, чтобы закрыть все долги по налогам, кредитным и другим обязательствам, то оставшиеся просто аннулируются.
-                <br><br>
-                Еще один законный способ списать долги — подать заявление в МФЦ. В результате внесудебной процедуры банкротства финансовые обязательства обнулят за 6 месяцев.
-                <br><br>
-                <span>Условиями обращения в МФЦ с заявлением о несостоятельности являются:</span>
-                <ul>
-                    <li>Сумма долга — 50 000-500 000 рублей;</li>
-                    <li>В отношении гражданина нет действующих производств у приставов;</li>
-                    <li>Ранее открытые производства были окончены из-за отсутствия имущества, на которое можно обратить взыскание.</li>
-                </ul>
-                <span>Однако списать долги через МФЦ труднее, чем через суд потому, что:</span>
-                <ul>
-                    <li>Во внесудебном банкротстве не участвует финансовый управляющий, а его функции частично выполняют кредиторы. При выявлении имущества или сделки, они имеют право перевести процедуру в судебную;</li>
-                    <li>Если гражданину откажут в признании банкротом, то вновь подать заявление он сможет только через два месяца;</li>
-                    <li>Человек, ставший банкротом через МФЦ, сможет пройти процедуру повторно только через 10 лет (против 5-ти лет через арбитражный суд).</li>
-                </ul>
-            </div>
-            
-            <h2 class="consulting-title">БАНКРОТСТВО ИП И ФИЗЛИЦА С ДОЛГАМИ ПО СБОРАМ И НАЛОГАМ</h2>
-            <div class="consulting-descr">
-                Банкротство проходит согласно Федеральному закону № 127-ФЗ. Однако налоги списываются согласно положениям НК РФ, а не ФЗ "О банкротстве". В ст. 59 НК РФ указывается, что недоимка, штраф или пеня признаются безнадежными ко взысканию, если в ходе банкротства гражданин был освобожден от исполнения требований кредиторов согласно ФЗ № 127-ФЗ. То есть, если после реализации активов, человек не может рассчитаться с ФНС, то его долги перед ней аннулируются.
-                <br><br>
-                <span>По окончании процедуры несостоятельности банкроту нужно подать в ФНС по месту проживания заявление о признании задолженности безнадежной, приложив к нему:</span>
-                <ul>
-                    <li>Справку о сумме задолженности;</li>
-                    <li>Копию решения суда о признании банкротом;</li>
-                    <li>Копию определению суда о завершении процедуры банкротства.</li>
-                </ul>
-                В результате налоговый орган должен принять решение о списании долга в течение месяца.
-            </div>
-            
-            <h2 class="consulting-title">СПИСЫВАЮТСЯ ЛИ ТЕКУЩИЕ НАЛОГИ ПРИ БАНКРОТСТВЕ ФИЗИЧЕСКИХ ЛИЦ</h2>
-            <div class="consulting-descr">
-                Согласно п. 2 ст. 59 НК РФ, налоговую задолженность могут признавать безнадежной ко взысканию по окончании процедуры банкротства в части недоимки по налогу, непогашенной в процедуре банкротства.
-                <br><br>
-                Недоимка представляет собой сумму налога, не оплаченную гражданином в срок, установленный налоговым законодательством.
-                <br><br>
-                Проще говоря, закон говорит о долге, не выплаченном во время до банкротства и включенным в реестр требований кредиторов должника. Текущие платежи в реестр не входят, а срок их погашения наступает в ходе процедуры банкротства.
-                <br><br>
-                Когда налоговый период завершился до процедуры несостоятельности, то задолженность по налогам попадает в реестр требований кредиторов и может признаваться безнадежной ко взысканию. Если налоговый период завершится в ходе процедуры банкротства, то задолженность будет признана текущей, в реестр не войдет и будет взыскиваться принудительно во время или по окончании процедуры банкротства. Такую недоимку признать безнадежной не получится.
-                <br><br>
-                Дело в том, что согласно п. 1 ст. 5 ФЗ № 127-ФЗ от 26 октября 2002 года, финансовые обязательства и обязательные платежи, появившиеся после даты принятия судом заявления о признании должника банкротом, считаются текущими, а их не нельзя списывать.
-                <br><br>
-                Компания <span>Правовое Решение</span> оказывает помощь в банкротстве физических лиц и индивидуальных предпринимателей. Если вы не в состоянии закрывать налоги и другие долги, обратитесь к нам. Мы проведем бесплатную юридическую консультацию, в ходе которой вы получите ответы на все ваши вопросы, а также определим, сможете ли вы становиться банкротом.
-                <br><br>
-                Мы оказываем услугу ведения дела "под ключ". Наши юристы будут ходить в суд и представлять ваши интересы, а вы освобождаться от налогов. Оплата банкротства доступна в рассрочку.
-            </div>            
-        </div>
-    </section>
-    <section class="advantages">
-        <div class="container">
-            <div class="advantages-wrapper">
-                <div class="advantages-title-wrapper">
-                    <div class="advantages-title-item">
-                        <h2 class="advantages-title advantages-title-active">Преимущества работы с нами</h2>
-                        <div class="advantages-title-divider advantages-title-divider-active"></div>
-                    </div>
-                    <div class="advantages-title-item">
-                        <h2 class="advantages-title">Финансовые выгоды</h2>
-                        <div class="advantages-title-divider"></div>
-                    </div>
-                    <div class="advantages-title-item">
-                        <h2 class="advantages-title">Если не списать долги</h2>
-                        <div class="advantages-title-divider"></div>
-                    </div>
+            <h1 class="services-title">Статьи</h1>
+            <div class="services-wrapper">
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/consulting-min.jpg" alt="Как подать на банкротство в 2024 году">
+                    <div class="services-item-title">Как подать на банкротство в 2024 году</div>
+                    <a href="consulting.html" class="services-item-button">Подробней</a>
                 </div>
-                <div class="advantages-item-wrapper">
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Дистанционная работа</div>
-                        <div class="advantages-item-text">После сбора документов, вы просто ожидаете положительного решения. Вся процедура проводится дистанционно и не требует вашего участия.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Отчетность об этапах процедуры</div>
-                        <div class="advantages-item-text">В любой момент готовы сообщить на какой стадии находится ваша процедура — весь процесс автоматизирован.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Узкая специализация</div>
-                        <div class="advantages-item-text">Специализируемся только на банкротстве. Это значит, что знаем наперед исход каждого дела.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Бесплатный анализ ситуации</div>
-                        <div class="advantages-item-text">Проведем консультацию, проанализируем ситуацию и сообщим возможно списать ваш долг полностью или частично.
-                        </div>
-                    </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/guard-min.jpg" alt="Документы для банкротства граждан">
+                    <div class="services-item-title">Документы для банкротства граждан</div>
+                    <a href="protect.html" class="services-item-button">Подробней</a>
                 </div>
-                <div class="advantages-item-wrapper d-none">
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Лёгкий старт</div>
-                        <div class="advantages-item-text">Запускаем работу по вашей процедуре в день заключения договора с платежом 5 тысяч рублей.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Беспроцентная рассрочка</div>
-                        <div class="advantages-item-text">Даем рассрочку на срок от 8 до 11 месяцев без процентов.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Фиксированная и неизменная цена</div>
-                        <div class="advantages-item-text">Мы фиксируем цену в договоре и она не меняется в ходе процедуры. Никаких навязанных услуг и дополнительных оплат.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Экономия</div>
-                        <div class="advantages-item-text">Потратите минимум в 5 раз меньше денег и освободитесь от долгов уже через 6-8 месяцев, признав себя банкротом.</div>
-                    </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/taxes-min.jpg" alt="Как сохранить недвижимость при банкротве по ипотеке?">
+                    <div class="services-item-title">Как сохранить недвижимость при банкротве по ипотеке?</div>
+                    <a href="debts.html" class="services-item-button">Подробней</a>
                 </div>
-                <div class="advantages-item-wrapper d-none">
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Кредиторы потребуют взыскание</div>
-                        <div class="advantages-item-text">Через 6 месяцев кредиторы начнут обращаться в Суд для принудительного взыскания.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Приставы возьмутся за кредит</div>
-                        <div class="advantages-item-text">Через 12 месяцев по решению суда Ваши долги поступят на исполнение в Федеральную службу судебных приставов.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> Наложат арест на имущество</div>
-                        <div class="advantages-item-text">На счета наложат арест,  запретят выезд за границу, а со всех доходов станут удерживать средства для погашения долга.</div>
-                    </div>
-                    <div class="advantages-item">
-                        <div class="advantages-item-title"><i class="fa-solid fa-check"></i> По долгам будут расти %</div>
-                        <div class="advantages-item-text">По вашим долговым обязательствам будут расти проценты, пени, и начисляться штрафы и неустойки.</div>
-                    </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/gas-min.jpg" alt="Что будет, если не платить ипотеку?">
+                    <div class="services-item-title">Что будет, если не платить ипотеку?</div>
+                    <a href="jkh.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/credit-min.jpg" alt="Стоимость банкротсва физ. лиц">
+                    <div class="services-item-title">Стоимость банкротсва физ. лиц</div>
+                    <a href="credits.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individuals-min.jpg" alt="Как происходит банкротсво физ. лиц?">
+                    <div class="services-item-title">Как происходит банкротсво физ. лиц?</div>
+                    <a href="phys.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/hipotec-min.jpg" alt="Списание долгов по кредитам при банкротсве">
+                    <div class="services-item-title">Списание долгов по кредитам при банкротсве</div>
+                    <a href="hipotec.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/Guarantors-min.jpg" alt="Последствия процедуры банкротсва в 2024">
+                    <div class="services-item-title">Последствия процедуры банкротсва в 2024</div>
+                    <a href="poruchiteli.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Плюсы и минусы банкротсва">
+                    <div class="services-item-title">Плюсы и минусы банкротсва</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как списать просроченый долг?">
+                    <div class="services-item-title">Как списать просроченый долг?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как законно не платить кредиты?">
+                    <div class="services-item-title">Как законно не платить кредиты?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Банкротсво в форме реструктуризации">
+                    <div class="services-item-title">Банкротсво в форме реструктуризации</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Срок исковой давности по долгам и кредиту">
+                    <div class="services-item-title">Срок исковой давности по долгам и кредиту</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Кредитные каникулы: как оформить и/или продлить?">
+                    <div class="services-item-title">Кредитные каникулы: как оформить и/или продлить?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как избавиться от долговой ямы кредитов?">
+                    <div class="services-item-title">Как избавиться от долговой ямы кредитов?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Что делать если нечем платить кредиты?">
+                    <div class="services-item-title">Что делать если нечем платить кредиты?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Тюрьма за невыплату кредитов">
+                    <div class="services-item-title">Тюрьма за невыплату кредитов</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Уголовная ответветственность за неуплату кредита">
+                    <div class="services-item-title">Уголовная ответветственность за неуплату кредита</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Кто такой судебный пристав?">
+                    <div class="services-item-title">Кто такой судебный пристав?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как работают судебные приставы?">
+                    <div class="services-item-title">Как работают судебные приставы?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Чего стоит ожидать и бояться?">
+                    <div class="services-item-title">Чего стоит ожидать и бояться?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как общаться с коллекторами?">
+                    <div class="services-item-title">Как общаться с коллекторами?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Что делать при аресте счетов приставами?">
+                    <div class="services-item-title">Что делать при аресте счетов приставами?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Что делать, если приставы сняли все деньги?">
+                    <div class="services-item-title">Что делать, если приставы сняли все деньги?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Как избавиться от звонков коллекторов?">
+                    <div class="services-item-title">Как избавиться от звонков коллекторов?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Исполнительное производтисво при банкротсве">
+                    <div class="services-item-title">Исполнительное производтисво при банкротсве</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Защита от угроз коллекторов">
+                    <div class="services-item-title">Защита от угроз коллекторов</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Что могут забрать судебные приставы при взыскании долгов?">
+                    <div class="services-item-title">Что могут забрать судебные приставы при взыскании долгов?</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Субсидиарная ответветственность и банкротсво">
+                    <div class="services-item-title">Субсидиарная ответветственность и банкротсво</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
+                </div>
+                <div class="services-item">
+                    <div class="services-item-mask"></div>
+                    <img src="./img/individual entrepreneur-min.jpg" alt="Процедура банкротсва ИП с долгами по налогам и кредитам в 2024">
+                    <div class="services-item-title">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</div>
+                    <a href="ip.html" class="services-item-button">Подробней</a>
                 </div>
             </div>
         </div>
@@ -939,7 +970,7 @@
                     <div class="footer-right-title">Меню</div>
                     <ul>
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="contacts.html">Стоимость услуг</a></li>
+                        <li><a href="price.html">Стоимость услуг</a></li>
                         <li><a href="FAQ.html">Частые вопросы</a></li>
                         <li><a href="review.html">Наши отзывы</a></li>
                         <li><a href="contacts.html">Контакты</a></li>
@@ -949,12 +980,12 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1b6acda535.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/i18n/jquery.ui.datepicker-ru.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/consulting.js"></script>
 </body>
 </html>

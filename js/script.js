@@ -98,3 +98,45 @@ hamburger.addEventListener('click', () => {
     mask.classList.toggle('d-none');
     body.classList.toggle('overflow-hidden');
 })
+
+const modalClose = document.querySelector('.modal-close');
+      modal = document.querySelector('.modal');
+
+function toggleModal() {
+  modal.classList.toggle('d-none');
+  mask.classList.toggle('d-none');
+}
+
+function menuToggleModal() {
+  const modal = document.querySelector('.modal');
+  modal.classList.toggle('d-none');
+  navMobileMenu.classList.toggle('nav-mobile-menu-active');
+  hamburger.classList.toggle('active');
+}
+
+modalClose.addEventListener('click', toggleModal);
+
+$(function() {
+  $("#dateInput").datepicker({
+      minDate: 0,
+      beforeShow: function (input, inst) {
+        inst.dpDiv.addClass('datepicker-ru');
+    },
+    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+    dayNames: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    dayNamesShort: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    dayNamesMin: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+    weekHeader: 'Пн',
+  });
+});
+
+const inputsArray = document.querySelectorAll ('.modal-form input'),
+      modalBtn = document.querySelector ('.modal-btn');
+
+modalBtn.addEventListener('click', () => {
+  if (Array.from(inputsArray).every(item => item.value.trim() !== '')) {
+    modalBtn.type = 'submit';
+    document.querySelector('.modal-form').submit();
+  }
+});
