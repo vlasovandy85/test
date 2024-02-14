@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легкость Права</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="./icons/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="phone">
+        <a href="tel:+7 (495) 123-45-67" class="phone-number"><i class="fa-solid fa-phone-volume phone-icon"></i></a>
+    </div>
+    <div class="mask d-none"></div>
+    <div class="modal d-none">
+        <div class="container position-relative">
+            <div class="modal-image">
+                <img src="./img/call-center.jpg" alt="photo">
+            </div>
+            <i class="fa-regular fa-circle-xmark modal-close"></i>
+            <h2 class="text-center mb-4 modal-title">Оставьте заявку и мы Вам перезвоним</h2>
+            <form class="modal-form" action="telegram-callback.php" method="POST">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="modal-input2">
+                            <label for="name-callback" class="form-label">Ваше имя</label>
+                            <input name="name-callback" type="text" class="form-control" id="name">
+                        </div>
+                        <div class="modal-input2">
+                            <label for="phone-callback" class="form-label">Номер телефона</label>
+                            <input name="phone-callback" type="tel" class="form-control" id="phone">
+                        </div>
+                            <div class="main-btn main-btn-white m-0 modal-btn">Оставить заявку</div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <div class="request d-none">
+        <div class="container position-relative">
+            <i class="fa-regular fa-circle-xmark request-close"></i>
+            <h2 class="text-center mb-4 w-100">Оставьте заявку. Шаг <span class="request-step">1</span></h2>
+            <div class="request-form">
+                    <form action="telegram.php" method="POST">
+                            <div class="request-form-item">
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <div class="mb-3">
+                                                    <label for="name" class="form-label">Ваше ФИО</label>
+                                                    <input name="name" type="text" class="form-control" id="name">
+                                            </div>
+                                            <div class="mb-3">
+                                                    <label for="phone" class="form-label">Номер телефона</label>
+                                                    <input name="phone" type="text" class="form-control" id="phone">
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Укажите сумму ваших долгов</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Менее 300 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-12" class="cbx-12" type="checkbox" value="Менее 300 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">300 000 – 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-13" class="cbx-12" type="checkbox" value="300 000 – 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">500 000 – 1 000 0000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-14" class="cbx-12" type="checkbox" value="500 000 – 1 000 0000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">1 000 000 – 1 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-15" class="cbx-12" type="checkbox" value="1 000 000 – 1 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Более 1 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-16" class="cbx-12" type="checkbox" value="Более 1 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Какое имущество у вас имеется?</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Квартира (единственное жилье)</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-17" type="checkbox" value="Квартира (единственное жилье)"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Загородный дом / Участок</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-18" type="checkbox" value="Загородный дом / Участок"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Автомобиль</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-19" type="checkbox" value="Автомобиль"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Иное имущество</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-20" type="checkbox" value="Иное имущество"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Отсутствует имущество</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-21" type="checkbox" value="Отсутствует имущество"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Сколько времени вы не оплачиваете долги?</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">До 3-х месяцев</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-22" class="cbx-13" type="checkbox" value="До 3-х месяцев"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">От 3-х до 12-ти месяцев</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-23" class="cbx-13" type="checkbox" value="От 3-х до 12-ти месяцев"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Больше года</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-24" class="cbx-13" type="checkbox" value="Больше года"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Плачу вовремя</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-25" class="cbx-13" type="checkbox" value="Плачу вовремя"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                <h3 class="text-center mb-3 request-form-item-title">У вас есть действующая ипотека или автокредит?</h3>
+                                <div class="d-flex flex-column align-items-center gap-2">
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Да</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="mortgage" id="cbx-26" class="cbx-14" type="checkbox" value="Да"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Нет</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="mortgage" id="cbx-27" class="cbx-14" type="checkbox" value="Нет"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                    <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                <h3 class="text-center mb-3 request-form-item-title">У вас есть обязательства по выплате алиментов?</h3>
+                                <div class="d-flex flex-column align-items-center gap-2">
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Да</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="obligations" id="cbx-28" class="cbx-15" type="checkbox" value="Да"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Нет</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="obligations" id="cbx-29" class="cbx-15" type="checkbox" value="Нет"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                    <button disabled type="submit" class="main-btn main-btn-white m-0 send-btn">Отправить</button>
+                                </div>
+                                
+                            </div>
+                    </form>
+            </div>
+    </div>
+    </div>
+    <nav class="nav">
+        <div class="nav-mobile-menu">
+            <div class="nav-mobile-menu-wrapper">
+                <ul class="nav-mobile-menu-ul">
+                    <li>
+                        <a href="about.html">О нас</a>
+                    </li>
+                    <li>
+                        <a href="price.html">Стоимость услуг</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="articles.html">Статьи</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Банкротсво физ. лиц
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Кредиты и микрозаймы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Долги
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Приставы и коллекторы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
+                            <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать, если приставы сняли все деньги?</a></li>
+                            <li><a class="dropdown-item" href="#">Как избавиться от звонков коллекторов?</a></li>
+                            <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
+                            <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Другие статьи
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
+                            <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-mobile-menu-btns">
+                <div class="nav-mobile-divider"></div>
+                <div class="nav-mobile-menu-btns-wrapper">
+                    <button class="nav-top-button" onclick="menuToggleModal()">Заказать звонок</button>
+                    <button class="nav-top-button" onclick="menuToggleRequest()">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-mobile">
+                <a href="index.html" class="nav-mobile-logo">
+                    <img src="./icons/logo.svg" alt="Лого">
+                </a>
+                <div class="nav-mobile-wrapper">
+                    <a href="tel: +7 (495) 123-45-67" class="nav-mobile-phone">+7 (495) 123-45-67</a>
+                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                        <path
+                              class="line top"
+                              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                        <path
+                              class="line middle"
+                              d="m 30,50 h 40" />
+                        <path
+                              class="line bottom"
+                              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-top">
+                <ul>
+                    <li>
+                        <a href="about.html">О нас</a>
+                    </li>
+                    <li>
+                        <a href="price.html">Стоимость услуг</a>
+                    </li>
+                    <li>
+                        <button class="nav-top-button" onclick="toggleRequest()">Оставить заявку</button>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="articles.html">Статьи</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-center-logo">
+                    <img src="./icons/logo.svg" alt="Лого">
+                </a>
+                <div class="nav-center-callback">
+                    <a href="tel: +7 (495) 123-45-67" class="nav-center-phone">+7 (495) 123-45-67</a>
+                    <div class="nav-center-callback-title">Свяжитесь с нами</div>
+                </div>
+                <div class="nav-center-social">
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="nav-center-button" onclick="toggleModal()">Заказать звонок</div>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-bottom">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Банкротсво физ. лиц
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Кредиты и микрозаймы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Долги
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Приставы и коллекторы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
+                            <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать, если приставы сняли все деньги?</a></li>
+                            <li><a class="dropdown-item" href="#">Как избавиться от звонков коллекторов?</a></li>
+                            <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
+                            <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Другие статьи
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
+                            <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="article-sub">
+        <div class="container">
+            <h1 class="article-sub-title">СПИСАНИЕ ДОЛГОВ ПО КРЕДИТАМ ПРИ БАНКРОТСТВЕ ФИЗИЧЕСКИХ ЛИЦ</h1>
+            <h2 class="article-sub-subtitle">1. Списание долгов – как это будет «по-юридически»?</h2>
+            <div class="article-sub-text">
+                Мы должны понять некоторые юридические аспекты, чтобы разобраться в процессе освобождения гражданина от долгов. Но это стоит потраченного времени и усилий, так как результаты будут значительными! В законах отсутствует термин "списание долгов физических лиц"; вместо этого используется понятие <span>"освобождение гражданина от долговых обязательств"</span>. Это заключительный этап процедуры банкротства гражданина, который осуществляется по решению суда. Это может показаться сложным, и настоящее понимание Закона о банкротстве требует <span>времени и опыта</span>. Поэтому лучше обратиться к опытным юристам, которые уже имеют опыт работы с банкротными делами.
+                <br><br>
+                Важно понимать, что списание долгов - это не быстрый и простой процесс. Оно происходит в конце процедуры банкротства, которая может занять несколько месяцев. Хотя общий путь может показаться понятным: мы узнаем, как пройти процедуру банкротства, затем ее проходим, и в конце получаем возможность списать долги.
+                <br><br>
+                Действительно, интерпретация закона может отличаться у обычных людей и профессиональных юристов. И это нормально. Квалифицированный юрист способен разъяснить юридический термин простым и понятным языком и наоборот. Списание долгов физических лиц - именно тот случай, когда такой перевод может быть необходим.
+                <br><br>
+                Действительно, в большинстве случаев людей интересует не формальное название их юридической ситуации, а то, как они могут решить свои финансовые проблемы и избавиться от долгов. Название процедуры может показаться им второстепенным, важнее всего понять, как она поможет им в их конкретной ситуации и какие шаги им нужно предпринять для достижения желаемого результата.
+                <div class="article-sub-tip">
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="article-sub-tip-title">Совет эксперта</div>
+                    </div>
+                    <div class="article-sub-tip-wrapper">
+                        <div class="article-sub-tip-img">
+                            <img src="./img/expert.jpg" alt="эксперт">
+                        </div>
+                        <div class="article-sub-tip-text">
+                            Списание долгов и банкротство – это разные вещи. Списание долгов – это кусочек, последний этап длинного процесса банкротства. Но реально освободиться от ежемесячных выплат по долгам можно раньше, чем юридически списать долги. Еще чуть-чуть юриспруденции – и все станет понятно!
+                        </div>
+                    </div>
+                    <button class="footer-center-button d-block m-auto mt-3" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+            </div>
+            <h2 class="article-sub-subtitle">2. Последствия банкротства</h2>
+            <div class="article-sub-text">
+                По закону последствия банкротства гражданина делятся на <span>2 группы:</span>
+                <ul>
+                    <li>Последствия, наступающие после введения процедуры банкротства</li>
+                    <li>Последствия, наступающие после завершения процедуры банкротства</li>
+                </ul>
+                <br>
+                <span>Схематично банкротство гражданина выглядит следующим образом:</span>
+                <ul>
+                    <li>Задолженность замораживается.</li>
+                    <li>Исполнительные производства приостанавливаются или прекращаются.</li>
+                    <li>Все судебные дела о задолженностях, которые ведутся в отношении Вас, приостанавливаются и объединяются с процедурой банкротства.</li>
+                    <li>Все права в отношении Вашего имущества начинает осуществлять финансовый управляющий.</li>
+                </ul>
+                <br>
+                <span>Последствия, наступающие после завершения процедуры банкротства:</span>
+                <ul>
+                    <li>Освобождение гражданина от долговых обязательств.</li>
+                    <li>В течение 1 года с момента объявления судом банкротства гражданина нельзя регистрироваться в качестве ИП (если проходили банкротство в качестве физического лица).</li>
+                    <li>В течение 5 лет нужно предупреждать о факте банкротства, если обращаешься за кредитом.</li>
+                    <li>В течение 3 лет нельзя участвовать в управлении юридическим лицом (если проходили банкротство в качестве физического лица)</li>
+                    <li>В течение 10 лет нельзя участвовать в управлении кредитной организацией.</li>
+                    <li>В течение 5 лет нельзя повторно объявить себя банкротом.</li>
+                    <li>В течение 5 лет нельзя занимать должности в органах управления страховой организации, негосударственного пенсионного фонда, управляющей компании инвестиционного фонда, паевого инвестиционного фонда, негосударственного пенсионного фонда, микрофинансовой компании, иным образом участвовать в управлении такими организациями.</li>
+                </ul>
+            </div>
+            <h2 class="article-sub-subtitle">3. Когда можно не платить кредит?</h2>
+            <div class="article-sub-text">
+                Итак, заметили ли вы? Замораживается задолженность - это первый пункт в списке последствий, который входит в первую группу. Замораживается - это все. Нельзя ни увеличить, ни уменьшить ее с этого момента. Другими словами, после того, как суд принял решение о вашем банкротстве, вы перестаете платить по кредитам. Хотя процесс банкротства, включая работу финансового управляющего и реализацию имущества, только начинается и продлится еще несколько месяцев. Но на самом деле все это еще лучше!
+                <br><br>
+                Когда вы подаете заявление в суд о своем банкротстве, обязательно указываете всю сумму долгов. Эту сумму подтверждаете документами, которые прикладываете к заявлению. Ваши кредитные договоры, расписки о задолженностях, налоговые уведомления, квитанции об оплате коммунальных услуг - все это необходимо показать. Так зачем запутывать официальные отчеты? Замораживается именно та сумма задолженности, которая указана в вашем заявлении в суд. Значит, с момента подачи заявления в суд вам не нужно платить никакие долги (из тех, что указаны в заявлении). Чтобы суммы оставались неизменными и расчеты не перепутывались. В начале статьи мы обещали вам хорошие новости. Так вот, все еще лучше, чем вы уже знали. Обратившись к нашим юристам, вы получаете консультацию и принимаете решение о банкротстве. Мы заключаем с вами договор и начинаем готовить заявление в суд и весь пакет документов. И с того момента вы прекращаете все выплаты по своим долгам! Если вы решили обратиться за банкротством, оплачивать кредиты уже не имеет смысла.
+                <div class="article-sub-tip">
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="article-sub-tip-title">Совет эксперта</div>
+                    </div>
+                    <div class="article-sub-tip-wrapper">
+                        <div class="article-sub-tip-img">
+                            <img src="./img/expert.jpg" alt="эксперт">
+                        </div>
+                        <div class="article-sub-tip-text">
+                            Обратите внимание: все эти методы являются законными способами не оплачивать долги. Это не обман, не мошенничество и не уклонение от исполнения обязательств.
+                        </div>
+                    </div>
+                    <button class="footer-center-button d-block m-auto mt-3" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+                <br><br>
+                Мы рекомендуем нашим клиентам только юридически законные и экономически обоснованные способы действий. Итак, мы начинаем подготавливать заявление в суд и прекращаем выплаты по кредитам.
+                <br><br>
+                Банкротство гражданина - это юридическая процедура, которая, как правило, сложна и требует времени. Мы обещали разъяснить для вас закон о банкротстве на понятном языке. Однако описать все аспекты этой процедуры в одной статье невозможно. Судебные, финансовые управляющие и другие органы и организации будут заниматься вашим делом в течение 8 месяцев, и это только снаружи. Процесс банкротства гражданина представляет собой сложный процесс. Перед тем как принимать решение о банкротстве, рекомендуется ознакомиться с информацией на нашем сайте или обратиться к специалистам. Законодательство о банкротстве содержит множество нюансов, и важно быть уверенным, что эта процедура подходит именно вам. В противном случае вы рискуете ухудшить свое финансовое положение. Подавая на банкротство и переставая платить свои долги, вы можете обнаружить, что эти долги не подлежат списанию, что приведет к дополнительным просрочкам и штрафам.
+            </div>
+            <h2 class="article-sub-subtitle">4. Списание долгов без банкротства физических лиц</h2>
+            <div class="article-sub-text">
+                Существует ли способ избежать процедуры банкротства и решить проблему с долгами? Процесс банкротства физических лиц может быть долгим и ограничивающим. Например, финансовый управляющий управляет моей зарплатой, оставляя мне лишь прожиточный минимум. Даже если моя зарплата увеличилась, я не могу воспользоваться дополнительными средствами, пока идет процесс банкротства. Также я ограничен в возможности совершения сделок, приобретения или продажи недвижимости, получения кредитов или открытия собственного бизнеса. Существует ли альтернатива этим ограничениям? Могут ли быть предложены интересные идеи? Конечно, многие задавались подобными вопросами. Мы обещали быть доступными для предоставления качественных юридических услуг, поэтому я готов дать вам честный ответ. Да, теоретически есть способы решить проблему с долгами без прибегания к процедуре банкротства. Однако эти методы чаще подходят для Остапа Бендера, чем для обычного человека. Кроме того, эти способы не являются менее трудоемкими или быстрыми. Например, можно попробовать скрыться и дождаться истечения срока исковой давности, который составляет 3 года. Не платить и надеяться, что кредитор не подаст в суд вовремя, и срок исковой давности истечет. Однако придется долго скрываться. Кроме того, вопрос о том, с какого момента начинается отсчет этого периода, может быть сложным для решения. Обычно такие вопросы решаются в суде, поэтому самостоятельно разобраться в этом может быть непросто. Во время скрытого пребывания кредиторы и коллекторы могут обращаться к вашим родным, друзьям и на работу.
+                <br><br>
+                Для человека, который стремится к законопослушной жизни, предложенные методы, можно сказать, не совсем подходят. Обычно люди стремятся к списанию долгов, чтобы иметь возможность открыто и спокойно вести свою жизнь, пользуясь всеми преимуществами современного общества. Одним из вариантов может быть списание долгов с помощью судебных приставов. Суть в том, что если у должника отсутствует какое-либо имущество или деньги на счетах, судебные приставы могут закрыть исполнительное производство из-за невозможности взыскания. Однако юридически это не означает, что долги будут списаны! Кредитор в течение трех лет может повторно обратиться к приставам для взыскания долга. Процесс может продолжаться до тех пор, пока кредитору это угодно. Судебные приставы также могут объявить должника в розыск. Этот метод сработает только в случае, если кредитор в течение трех лет не обратится повторно к приставам. В противном случае должнику-уклонисту гарантирована "интересная" жизнь с постоянными звонками коллекторов и визитами судебных приставов. Или же остается старый способ: скрываться от приставов. В общем, этот вариант подходит для тех, кто "юридически не существует" — тех, у кого нет официального дохода, имущества и денег на счетах. Но и такой вариант, если вдуматься, не слишком привлекателен.
+                <br><br>
+                <span>Все описанные способы избавления от долгов подобного рода действительно могут рассматриваться как авантюра или даже прямое мошенничество.</span>
+                <br><br>
+                Главный недостаток таких методов состоит в их ненадежности. Юридически ни один из них не обеспечивает полное освобождение от долгов. Списание долгов через процедуру банкротства является единственным способом, который гарантирует полное избавление от долгов. У него есть три преимущества:
+                <ul>
+                    <li>Он законный</li>
+                    <li>Списание долгов окончательно</li>
+                    <li>Если вы соответствуете требованиям закона, списание долгов будет гарантированным</li>
+                </ul>
+                Действительно, есть еще один аргумент в пользу процедуры банкротства. Люди часто сомневаются, стоит ли начинать процесс банкротства, потому что это занимает много времени и связано с различными ограничениями. Однако все остальные способы списать долги без обращения к банкротству также требуют времени и связаны с ограничениями. По сути, все те же минусы присутствуют: ограничения на совершение сделок, получение кредитов, законную деятельность в сфере предпринимательства. Даже онлайн переводы между картами становятся проблемой, так как деньги на счетах должны быть минимальными или отсутствовать вовсе. И все эти неудобства существуют без гарантии, что долги будут списаны.
+                <br><br>
+                <span>А банкротство – законная процедура, к тому же одобряемая государством.</span>
+                <br><br>
+                Банкротство физических лиц по российскому законодательству рассматривается как мера поддержки для законопослушных граждан, которые оказались в сложной финансовой ситуации. Именно поэтому судебная практика в области банкротства для граждан обычно благоприятна. По статистике Судебного департамента при Верховном Суде РФ, в 98% случаев, связанных с делами физических лиц, суды выносят решения об освобождении от долгов по завершении процедуры банкротства.
+            </div>
+            <h2 class="article-sub-subtitle">5. Какие долги не спишут?</h2>
+            <div class="article-sub-text">
+                Существует ли способ избежать процедуры банкротства и решить проблему с долгами? Процесс банкротства физических лиц может быть долгим и ограничивающим. Например, финансовый управляющий управляет моей зарплатой, оставляя мне лишь прожиточный минимум. Даже если моя зарплата увеличилась, я не могу воспользоваться дополнительными средствами, пока идет процесс банкротства. Также я ограничен в возможности совершения сделок, приобретения или продажи недвижимости, получения кредитов или открытия собственного бизнеса. Существует ли альтернатива этим ограничениям? Могут ли быть предложены интересные идеи? Конечно, многие задавались подобными вопросами. Мы обещали быть доступными для предоставления качественных юридических услуг, поэтому я готов дать вам честный ответ. Да, теоретически есть способы решить проблему с долгами без прибегания к процедуре банкротства. Однако эти методы чаще подходят для Остапа Бендера, чем для обычного человека. Кроме того, эти способы не являются менее трудоемкими или быстрыми. Например, можно попробовать скрыться и дождаться истечения срока исковой давности, который составляет 3 года. Не платить и надеяться, что кредитор не подаст в суд вовремя, и срок исковой давности истечет. Однако придется долго скрываться. Кроме того, вопрос о том, с какого момента начинается отсчет этого периода, может быть сложным для решения. Обычно такие вопросы решаются в суде, поэтому самостоятельно разобраться в этом может быть непросто. Во время скрытого пребывания кредиторы и коллекторы могут обращаться к вашим родным, друзьям и на работу.
+                <br><br>
+                Для человека, который стремится к законопослушной жизни, предложенные методы, можно сказать, не совсем подходят. Обычно люди стремятся к списанию долгов, чтобы иметь возможность открыто и спокойно вести свою жизнь, пользуясь всеми преимуществами современного общества. Одним из вариантов может быть списание долгов с помощью судебных приставов. Суть в том, что если у должника отсутствует какое-либо имущество или деньги на счетах, судебные приставы могут закрыть исполнительное производство из-за невозможности взыскания. Однако юридически это не означает, что долги будут списаны! Кредитор в течение трех лет может повторно обратиться к приставам для взыскания долга. Процесс может продолжаться до тех пор, пока кредитору это угодно. Судебные приставы также могут объявить должника в розыск. Этот метод сработает только в случае, если кредитор в течение трех лет не обратится повторно к приставам. В противном случае должнику-уклонисту гарантирована "интересная" жизнь с постоянными звонками коллекторов и визитами судебных приставов. Или же остается старый способ: скрываться от приставов. В общем, этот вариант подходит для тех, кто "юридически не существует" — тех, у кого нет официального дохода, имущества и денег на счетах. Но и такой вариант, если вдуматься, не слишком привлекателен.
+                <br><br>
+                <span>Все описанные способы избавления от долгов подобного рода действительно могут рассматриваться как авантюра или даже прямое мошенничество.</span>
+                <br><br>
+                Главный недостаток таких методов состоит в их ненадежности. Юридически ни один из них не обеспечивает полное освобождение от долгов. Списание долгов через процедуру банкротства является единственным способом, который гарантирует полное избавление от долгов. У него есть три преимущества:
+                <ul>
+                    <li>Он законный</li>
+                    <li>Списание долгов окончательно</li>
+                    <li>Если вы соответствуете требованиям закона, списание долгов будет гарантированным</li>
+                </ul>
+                Действительно, есть еще один аргумент в пользу процедуры банкротства. Люди часто сомневаются, стоит ли начинать процесс банкротства, потому что это занимает много времени и связано с различными ограничениями. Однако все остальные способы списать долги без обращения к банкротству также требуют времени и связаны с ограничениями. По сути, все те же минусы присутствуют: ограничения на совершение сделок, получение кредитов, законную деятельность в сфере предпринимательства. Даже онлайн переводы между картами становятся проблемой, так как деньги на счетах должны быть минимальными или отсутствовать вовсе. И все эти неудобства существуют без гарантии, что долги будут списаны.
+                <br><br>
+                <span>А банкротство – законная процедура, к тому же одобряемая государством.</span>
+                <br><br>
+                Банкротство физических лиц по российскому законодательству рассматривается как мера поддержки для законопослушных граждан, которые оказались в сложной финансовой ситуации. Именно поэтому судебная практика в области банкротства для граждан обычно благоприятна. По статистике Судебного департамента при Верховном Суде РФ, в 98% случаев, связанных с делами физических лиц, суды выносят решения об освобождении от долгов по завершении процедуры банкротства.
+                <br><br>
+                В законе о банкротстве определен перечень долгов, которые не подлежат списанию ни при каких обстоятельствах. После прохождения процедур банкротства эти долги будут продолжать взыскиваться с человека. К таким "несгораемым" долгам относятся:
+                <ul>
+                    <li>Долги по алиментам</li>
+                    <li>Долги, связанные с личностью кредитора, в первую очередь по возмещению вреда жизни и здоровью</li>
+                    <li>Долги индивидуального предпринимателя по заработной плате его бывшим сотрудникам</li>
+                    <li>Долги, связанные с совершением преступления (уголовные наказания в виде штрафов)</li>
+                    <li>Долги, связанные с субсидиарной ответственностью (руководители или учредители юридических лиц, которые привели организацию к банкротству)</li>
+                    <li>Долги, связанные с возмещением вреда имуществу, возникшего по вине должника</li>
+                </ul>
+                Все эти случаи связаны с вынесением судебных решений в отношении гражданина-должника, и эти решения будут исполняться независимо от процедуры банкротства. Обязательные выплаты по всем этим долгам учитываются при расчете платежеспособности гражданина. Из суммы доходов человека вычитаются суммы обязательных отчислений по указанным долгам, после чего оценивается хватает ли оставшихся средств на уплату других долгов. Каждая из этих ситуаций имеет свои особенности и множество примеров из жизни, а также уточнений в законе. Поэтому так важно работать с юристом, который может правильно оценить ситуацию с юридической точки зрения, что обычному человеку может быть непосильно.
+                <br><br>
+                Правильно, суд может отказать в списании долгов недобросовестным должникам. Это может произойти, если в ходе рассмотрения дела будут выявлены следующие факты:
+                <ul>
+                    <li>Должник не сотрудничал с финансовым управляющим и не предоставлял ему необходимые сведения и документы</li>
+                    <li>У должника имеются признаки преднамеренного банкротства, например, человек брал на себя заведомо непосильные кредиты и/или кредиты на поддельных документах</li>
+                    <li>Должник привлекался к уголовной ответственности за мошенничество, незаконное получение кредитов или фиктивное/преднамеренное банкротство</li>
+                    <li>Должник скрывал имущество, например, фиктивно продавая или даря его</li>
+                </ul>
+                В подобных случаях суд может решить, что должник не заслуживает льготы по списанию долгов и отказать в процедуре банкротства.
+            </div>
+            <h2 class="article-sub-subtitle">6. Зачем нужны юристы по банкротству?</h2>
+            <div class="article-sub-text">
+                Действительно, существует множество нюансов, от которых зависит, будет ли суд способен списать ваши долги или нет. То, что было описано, представляет лишь малую часть процедур, установленных законом. Существует множество правил, исключений и оговорок, которые необходимо учитывать. Кроме того, помимо самого закона, существуют разъяснения Верховного Суда и судебная практика, которые могут различаться в различных регионах.
+                <br><br>
+                Обычному человеку может быть сложно разобраться во всех этих деталях, и поэтому на помощь приходят опытные и квалифицированные юристы. Юристы могут дать прогноз по вашему делу, указать на подводные камни и предложить наилучшие стратегии. Они также помогут вам оценить риски и перспективы различных вариантов.
+                <br><br>
+                Важно помнить, что ваша цель - списание долгов, и для этого необходимо хорошо разбираться в вашей конкретной ситуации и знать закон. Юрист будет вашим представителем, защищая ваши интересы и помогая принимать правильные решения в вашей финансовой ситуации.
+                <br><br>
+                Также стоит отметить, что в процессе любого банкротства физических лиц могут возникнуть сложности. Вас могут давить кредиторы, угрожать коллекторы, и т. д. Однако ваш юрист по банкротству будет вам помощником в решении этих проблем.
+                <br><br>
+                Добросовестный юрист не будет обещать вам стопроцентного результата за скидку. Он должен будет тщательно изучить вашу ситуацию и решить, может ли он помочь вам в списании долгов. Подробное первичное консультирование является важным этапом работы юриста по банкротству с клиентом. Наши юристы проведут с вами беседу, изучат ваши документы и предложат наилучшие стратегии действий, направленные на освобождение вас от долгов.
+                <br><br>
+                Действительно, около трети наших клиентов нуждаются в наших услугах и после завершения процедуры банкротства, и это по тому же делу! После того, как суд принимает решение об освобождении гражданина от долговых обязательств, приставы не имеют права производить удержания из доходов гражданина в счет списанных долгов. Однако на практике такие удержания все же могут происходить, по разным причинам: недостаточная координация между органами, бюрократические задержки, недобросовестное исполнение служебных обязанностей, и так далее. В таких случаях важно обратиться за помощью к юристу, чтобы защитить свои права и восстановить справедливость.
+                <br><br>
+                После вынесения решения суда об освобождении гражданина от долговых обязательств кредиторы также не имеют права подавать иски о взыскании с вас долгов, которые были заявлены в ходе дела о банкротстве. Однако иногда кредиторы все же могут пытаться подать такие иски, и в этом случае также необходима помощь квалифицированного юриста.
+                <br><br>
+                Иногда ситуация может быть сложной, когда у вас есть долги, которые могут быть списаны в рамках банкротства, и долги, которые не могут быть списаны по закону. Неразбериха в таких ситуациях гарантирована, и в этом случае обращение к опытному юристу становится крайне важным. Без его помощи справиться с такими сложностями может оказаться просто невозможно.
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./icons/logo.svg" alt="Лого">
+                    </a>
+                    <a href="tel: +7 (495) 123-45-67" class="footer-left-phone">+7 (495) 123-45-67</a>
+                    <h4 class="footer-left-text">© 2024 Правовое Решение. Все права защищены.</h4>
+                </div>
+                <div class="footer-center">
+                    <div class="footer-center-title">Обратная связь</div>
+                    <button class="footer-center-button" onclick="toggleRequest()">Оставить заявку</button>
+                    <button class="footer-center-button" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right-title">Меню</div>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="price.html">Стоимость услуг</a></li>
+                        <li><a href="FAQ.html">Частые вопросы</a></li>
+                        <li><a href="review.html">Наши отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="contacts.html">Статьи</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1b6acda535.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

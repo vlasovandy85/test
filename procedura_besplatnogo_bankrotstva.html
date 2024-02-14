@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Легкость Права</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="./icons/favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="phone">
+        <a href="tel:+7 (495) 123-45-67" class="phone-number"><i class="fa-solid fa-phone-volume phone-icon"></i></a>
+    </div>
+    <div class="mask d-none"></div>
+    <div class="modal d-none">
+        <div class="container position-relative">
+            <div class="modal-image">
+                <img src="./img/call-center.jpg" alt="photo">
+            </div>
+            <i class="fa-regular fa-circle-xmark modal-close"></i>
+            <h2 class="text-center mb-4 modal-title">Оставьте заявку и мы Вам перезвоним</h2>
+            <form class="modal-form" action="telegram-callback.php" method="POST">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="modal-input2">
+                            <label for="name-callback" class="form-label">Ваше имя</label>
+                            <input name="name-callback" type="text" class="form-control" id="name">
+                        </div>
+                        <div class="modal-input2">
+                            <label for="phone-callback" class="form-label">Номер телефона</label>
+                            <input name="phone-callback" type="tel" class="form-control" id="phone">
+                        </div>
+                            <div class="main-btn main-btn-white m-0 modal-btn">Оставить заявку</div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <div class="request d-none">
+        <div class="container position-relative">
+            <i class="fa-regular fa-circle-xmark request-close"></i>
+            <h2 class="text-center mb-4 w-100">Оставьте заявку. Шаг <span class="request-step">1</span></h2>
+            <div class="request-form">
+                    <form action="telegram.php" method="POST">
+                            <div class="request-form-item">
+                                    <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <div class="mb-3">
+                                                    <label for="name" class="form-label">Ваше ФИО</label>
+                                                    <input name="name" type="text" class="form-control" id="name">
+                                            </div>
+                                            <div class="mb-3">
+                                                    <label for="phone" class="form-label">Номер телефона</label>
+                                                    <input name="phone" type="text" class="form-control" id="phone">
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Укажите сумму ваших долгов</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Менее 300 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-12" class="cbx-12" type="checkbox" value="Менее 300 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">300 000 – 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-13" class="cbx-12" type="checkbox" value="300 000 – 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">500 000 – 1 000 0000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-14" class="cbx-12" type="checkbox" value="500 000 – 1 000 0000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">1 000 000 – 1 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-15" class="cbx-12" type="checkbox" value="1 000 000 – 1 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Более 1 500 000 руб.</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="sum" id="cbx-16" class="cbx-12" type="checkbox" value="Более 1 500 000 руб."/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Какое имущество у вас имеется?</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Квартира (единственное жилье)</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-17" type="checkbox" value="Квартира (единственное жилье)"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Загородный дом / Участок</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-18" type="checkbox" value="Загородный дом / Участок"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Автомобиль</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-19" type="checkbox" value="Автомобиль"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Иное имущество</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-20" type="checkbox" value="Иное имущество"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Отсутствует имущество</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="prop[]" id="cbx-21" type="checkbox" value="Отсутствует имущество"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                    <h3 class="text-center mb-3 request-form-item-title">Сколько времени вы не оплачиваете долги?</h3>
+                                    <div class="d-flex flex-column align-items-center gap-2">
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">До 3-х месяцев</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-22" class="cbx-13" type="checkbox" value="До 3-х месяцев"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">От 3-х до 12-ти месяцев</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-23" class="cbx-13" type="checkbox" value="От 3-х до 12-ти месяцев"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Больше года</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-24" class="cbx-13" type="checkbox" value="Больше года"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                    <label for="name" class="form-label m-0">Плачу вовремя</label>
+                                                    <div class="checkbox-wrapper-12">
+                                                            <div class="cbx">
+                                                                <input name="time" id="cbx-25" class="cbx-13" type="checkbox" value="Плачу вовремя"/>
+                                                                <label for="cbx-12"></label>
+                                                                <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                                <defs>
+                                                                    <filter id="goo-12">
+                                                                        <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                        <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                    </filter>
+                                                                </defs>
+                                                            </svg>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                        <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                    </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                <h3 class="text-center mb-3 request-form-item-title">У вас есть действующая ипотека или автокредит?</h3>
+                                <div class="d-flex flex-column align-items-center gap-2">
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Да</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="mortgage" id="cbx-26" class="cbx-14" type="checkbox" value="Да"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Нет</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="mortgage" id="cbx-27" class="cbx-14" type="checkbox" value="Нет"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                    <div class="request-form-next">Следующий шаг <i class="fa-solid fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="request-form-item d-none">
+                                <h3 class="text-center mb-3 request-form-item-title">У вас есть обязательства по выплате алиментов?</h3>
+                                <div class="d-flex flex-column align-items-center gap-2">
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Да</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="obligations" id="cbx-28" class="cbx-15" type="checkbox" value="Да"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-3 gap-3 request-form-subitem">
+                                                <label for="name" class="form-label m-0">Нет</label>
+                                                <div class="checkbox-wrapper-12">
+                                                        <div class="cbx">
+                                                            <input name="obligations" id="cbx-29" class="cbx-15" type="checkbox" value="Нет"/>
+                                                            <label for="cbx-12"></label>
+                                                            <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                                                                <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                            <defs>
+                                                                <filter id="goo-12">
+                                                                    <fegaussianblur in="SourceGraphic" stddeviation="4" result="blur"></fegaussianblur>
+                                                                    <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></fecolormatrix>
+                                                                    <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                                                                </filter>
+                                                            </defs>
+                                                        </svg>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="request-form-prev"><i class="fa-solid fa-chevron-left"></i> Назад</div>
+                                    <button disabled type="submit" class="main-btn main-btn-white m-0 send-btn">Отправить</button>
+                                </div>
+                                
+                            </div>
+                    </form>
+            </div>
+    </div>
+    </div>
+    <nav class="nav">
+        <div class="nav-mobile-menu">
+            <div class="nav-mobile-menu-wrapper">
+                <ul class="nav-mobile-menu-ul">
+                    <li>
+                        <a href="about.html">О нас</a>
+                    </li>
+                    <li>
+                        <a href="price.html">Стоимость услуг</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="articles.html">Статьи</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Банкротсво физ. лиц
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Кредиты и микрозаймы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Долги
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Приставы и коллекторы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
+                            <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать, если приставы сняли все деньги?</a></li>
+                            <li><a class="dropdown-item" href="#">Как избавиться от звонков коллекторов?</a></li>
+                            <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
+                            <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Другие статьи
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
+                            <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-mobile-menu-btns">
+                <div class="nav-mobile-divider"></div>
+                <div class="nav-mobile-menu-btns-wrapper">
+                    <button class="nav-top-button" onclick="menuToggleModal()">Заказать звонок</button>
+                    <button class="nav-top-button" onclick="menuToggleRequest()">Оставить заявку</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav-mobile">
+                <a href="index.html" class="nav-mobile-logo">
+                    <img src="./icons/logo.svg" alt="Лого">
+                </a>
+                <div class="nav-mobile-wrapper">
+                    <a href="tel: +7 (495) 123-45-67" class="nav-mobile-phone">+7 (495) 123-45-67</a>
+                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                        <path
+                              class="line top"
+                              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                        <path
+                              class="line middle"
+                              d="m 30,50 h 40" />
+                        <path
+                              class="line bottom"
+                              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-top">
+                <ul>
+                    <li>
+                        <a href="about.html">О нас</a>
+                    </li>
+                    <li>
+                        <a href="price.html">Стоимость услуг</a>
+                    </li>
+                    <li>
+                        <button class="nav-top-button" onclick="toggleRequest()">Оставить заявку</button>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="articles.html">Статьи</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-center-logo">
+                    <img src="./icons/logo.svg" alt="Лого">
+                </a>
+                <div class="nav-center-callback">
+                    <a href="tel: +7 (495) 123-45-67" class="nav-center-phone">+7 (495) 123-45-67</a>
+                    <div class="nav-center-callback-title">Свяжитесь с нами</div>
+                </div>
+                <div class="nav-center-social">
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="nav-center-button" onclick="toggleModal()">Заказать звонок</div>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-bottom">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Банкротсво физ. лиц
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Кредиты и микрозаймы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Долги
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Приставы и коллекторы
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
+                            <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
+                            <li><a class="dropdown-item" href="#">Что делать, если приставы сняли все деньги?</a></li>
+                            <li><a class="dropdown-item" href="#">Как избавиться от звонков коллекторов?</a></li>
+                            <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
+                            <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Другие статьи
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
+                            <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
+                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="article-sub">
+        <div class="container">
+            <h1 class="article-sub-title">ПРОЦЕДУРА БЕСПЛАТНОГО БАНКРОТСТВА ФИЗИЧЕСКОГО ЛИЦА ЧЕРЕЗ МФЦ В 2024 ГОДУ</h1>
+            <h2 class="article-sub-subtitle">1. Как проходит банкротство по упрощенной схеме</h2>
+            <div class="article-sub-text">
+                Упрощенная схема банкротства через многофункциональный центр не включает в себя процедуру обращения в суд. Основные отличия упрощенной схемы от традиционной процедуры заключаются в следующем:
+                <ul>
+                    <li>Должник должен напрямую подать заявление в МФЦ по месту своего жительства или нахождения.</li>
+                    <li>Существует ограничение на сумму долга, которая должна соответствовать диапазону от 25 000 до 1 миллиона рублей.</li>
+                    <li>Пакет документов для упрощенной процедуры меньше, и должник не несет расходов, таких как госпошлины, вознаграждения управляющему и прочие сопутствующие траты.</li>
+                    <li>Продолжительность процедуры ограничена - через ровно 6 месяцев должник будет признан банкротом и освобожден от долгов.</li>
+                </ul>
+                Таким образом, для должника достаточно бесплатно подать заявление на банкротство в ближайший МФЦ при соблюдении установленных критериев.
+            </div>
+            <h2 class="article-sub-subtitle">2. Кому выгодно банкротство через МФЦ?</h2>
+            <div class="article-sub-text">
+                С 1 сентября по 31 декабря 2021 года 6413 человек обратились с заявлением о своем банкротстве во внесудебном порядке. В более чем 4,5 тысячах случаев процедура была отклонена, что составляет более 75%. Причина этого проста - далеко не все соответствуют требованиям закона.
+                <br><br>
+                Возникает закономерный вопрос: для кого разработан такой механизм списания долгов? В основном, для самого государства.
+                <div class="article-sub-tip">
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="article-sub-tip-title">Совет эксперта</div>
+                    </div>
+                    <div class="article-sub-tip-wrapper">
+                        <div class="article-sub-tip-img">
+                            <img src="./img/expert.jpg" alt="эксперт">
+                        </div>
+                        <div class="article-sub-tip-text">
+                            Существует прослойка должников, взыскание с которых просто невозможно. Работать с ними бессмысленно, но и прекратить процесс нельзя. А это значит, что будут задействованы множество человек на разных уровнях и затрачено колоссальное количество ресурсов на делопроизводство. Это долго и дорого. Списать долг с безнадежных должников намного проще.
+                        </div>
+                    </div>
+                    <button class="footer-center-button d-block m-auto mt-3" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+                <br>
+                Нужно рассчитать сумму долга. Закон требует, чтобы общая сумма задолженности была в диапазоне от 25 000 до 1 000 000 рублей.
+                <br><br>
+                <span>Сюда входят:</span>
+                <ul>
+                    <li>Просроченные выплаты по кредиту</li>
+                    <li>Кредиты, в которых нет просрочек</li>
+                    <li>Любые кредиты, где Вы выступаете поручителем. По закону поручительство тоже является финансовым обязательством.</li>
+                </ul>
+                <br>
+                Для подтверждения наличия закрытого исполнительного листа согласно части 4 пункта 1 статьи 46 Федерального закона № 229-ФЗ необходимо обратиться к компетентным органам или в соответствующие юридические инстанции. Это означает, что вы уже имели задолженность по одному из кредитов. Ваш кредитор обратился в суд, который передал дело приставам. Однако они не смогли взыскать с вас долг, так как подходящего имущества для взыскания не обнаружилось. Интересно, что для возможности законного списания долгов через МФЦ достаточно даже наличия одного закрытого исполнительного листа хотя бы от одного кредитора.
+                <br><br>
+                Для доказательства отсутствия у вас доходов, превышающих региональный минимальный размер оплаты труда (МРОТ), следует предоставить соответствующие документы и сведения в МФЦ. Если все необходимые условия соблюдены, вы можете приступить к подаче заявления в МФЦ. Процедура выглядит следующим образом:
+                <ul>
+                    <li>Вы заполняете необходимые документы, включая заявление в МФЦ и список ваших кредиторов и должников.</li>
+                    <li>В течение рабочего дня заявление проходит проверку. Если все заполнено верно и ваша ситуация соответствует законодательству, информация о вас вносится в Единый федеральный реестр сведений о банкротстве (ЕФРСБ).</li>
+                    <li>В течение следующих шести месяцев ваши кредиторы проверяют ваше имущество и счета. Если в течение этого времени будет обнаружено имущество или доход, достаточный для погашения задолженности, дело может быть передано в суд.</li>
+                    <li>По истечении полугода, если не будет обнаружено скрытого имущества или доходов, вы признаетесь банкротом, и ваш долг будет списан.</li>
+                    <li>Процедуру можно пройти повторно только через 10 лет.</li>
+                </ul>
+            </div>
+            <h2 class="article-sub-subtitle">3. Какие долги не списать бесплатно?</h2>
+            <div class="article-sub-text">
+                <span>Не получится списать долги через МФЦ, если:</span>
+                <ul>
+                    <li>Общая сумма долга не вписывается в указанный диапазон. Тогда возможно только обращение в суд.</li>
+                    <li>Нет закрытого исполнительного листа по по ч.4 п.1 ст. 46 № 229-ФЗ. То есть либо никто не подавал на взыскание по этому пункту, либо подал, но процесс еще не завершился.</li>
+                    <li>Финансовые обязательства невозможно списать: долги по алиментам, штрафы ГИБДД, возмещение морального вреда или ущерба жизни и здоровью, невыплаченные зарплаты или выходные пособия сотрудникам. То есть долги, списание которых невозможно по закону. Такие суммы необходимо указывать, но списаны они не будут.</li>
+                    <li>Долги возникли после подачи заявления. Процедура занимает 6 месяцев. Если за это время должник взял еще один кредит, его придется платить в полной мере.</li>
+                    <li>Долги не указаны в заявлении.</li>
+                </ul>
+                <div class="article-sub-tip">
+                    <div class="d-flex align-items-center gap-2 justify-content-center">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div class="article-sub-tip-title">Совет эксперта</div>
+                    </div>
+                    <div class="article-sub-tip-wrapper">
+                        <div class="article-sub-tip-img">
+                            <img src="./img/expert.jpg" alt="эксперт">
+                        </div>
+                        <div class="article-sub-tip-text">
+                            При подаче заявления на банкротство важно правильно перечислить всех кредиторов и указать точную общую сумму долга. Например, если вы указали, что взяли кредиты в банках №1 и №2 на общую сумму 450 000 рублей, но забыли упомянуть о долге в 200 000 рублей в банке №3, этот долг останется в силе, и вам придется его погасить. В случае, если банк №3 обратится в суд для взыскания этого долга, процедура банкротства все равно может быть перенесена в суд, чтобы разрешить этот вопрос.
+                        </div>
+                    </div>
+                    <button class="footer-center-button d-block m-auto mt-3" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+            </div>
+            <h2 class="article-sub-subtitle">4. Какие риски при упрощенном банкротстве физических лиц?</h2>
+            <div class="article-sub-text">
+                Два основных риска бесплатного банкротства связаны с возможностью отказа со стороны МФЦ и передачей процедуры в суд.
+                <br><br>
+                Юридически после успешного завершения процедуры банкротства вы будете освобождены от долгов.
+                <br><br>
+                Заявление может быть отклонено, если при проверке выявят ошибки в его заполнении, например, недостаточные данные по открытым кредитам или отсутствие подтверждения о закрытых исполнительных листах. Любое несоответствие требованиям является основанием для отклонения.
+                <br><br>
+                Риск передачи процедуры в суд возникает, если у вас несколько кредиторов. Например, если у одного из них уже есть закрытый исполнительный лист, другие кредиторы могут в любой момент подать заявление о взыскании долга. Если это произойдет в течение 6 месяцев, дело будет передано в суд.
+                <br><br>
+                Также процедуру могут переквалифицировать в судебное разбирательство, если кредиторы обнаружат имущество, подходящее для изъятия, или если станет известно о скрытом имуществе должника, например, если он передал квартиру в подарок, имея финансовые обязательства перед банком, или если супруг должника владеет имуществом, которое может быть использовано для удовлетворения долгов.
+            </div>
+            <h2 class="article-sub-subtitle">5. Как должнику понять, какую процедуру банкротства лучше выбрать?</h2>
+            <div class="article-sub-text">
+                Процедура внесудебного банкротства сопряжена с рядом ограничений, и воспользоваться ею могут только определенные категории должников. Если после подачи заявления выяснится, что какие-то из условий были проигнорированы, ситуация может только ухудшиться — дело будет передано в суд для рассмотрения. Поэтому перед тем как идти в МФЦ, стоит обдумать, подходит ли вам внесудебное списание.
+                <br><br>
+                <span>Оцените свою ситуацию самостоятельно</span>
+                <br>
+                Напомним основные требования для бесплатного списания:
+                <ul>
+                    <li>Сумма долга должна быть в пределах от 25 000 до 1 000 000 рублей.</li>
+                    <li>Должен быть хотя бы один закрытый исполнительный лист по ч.4 п.1 ст. 46 № 229-ФЗ, и открытых не должно быть.</li>
+                    <li>Доходы должника не должны превышать региональный МРОТ.</li>
+                    <li>Не должно быть имущества, которым можно погасить долг, включая то, что было нажито в браке.</li>
+                </ul>
+                Если ваша ситуация соответствует всем этим требованиям, то вам подойдет бесплатное списание.
+                <br><br>
+                <span>Обратитесь к консультанту по делам о банкротстве</span>
+                <br>
+                Если хотя бы одно из этих условий вызывает у вас сомнения, рекомендуется обратиться к консультанту по делам банкротства и честно рассказать о всех ваших долговых обязательствах.
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-left">
+                    <a href="index.html" class="footer-logo">
+                        <img src="./icons/logo.svg" alt="Лого">
+                    </a>
+                    <a href="tel: +7 (495) 123-45-67" class="footer-left-phone">+7 (495) 123-45-67</a>
+                    <h4 class="footer-left-text">© 2024 Правовое Решение. Все права защищены.</h4>
+                </div>
+                <div class="footer-center">
+                    <div class="footer-center-title">Обратная связь</div>
+                    <button class="footer-center-button" onclick="toggleRequest()">Оставить заявку</button>
+                    <button class="footer-center-button" onclick="toggleModal()">Заказать звонок</button>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right-title">Меню</div>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="price.html">Стоимость услуг</a></li>
+                        <li><a href="FAQ.html">Частые вопросы</a></li>
+                        <li><a href="review.html">Наши отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="contacts.html">Статьи</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1b6acda535.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

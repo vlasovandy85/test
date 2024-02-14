@@ -36,29 +36,18 @@
             </div>
             <i class="fa-regular fa-circle-xmark modal-close"></i>
             <h2 class="text-center mb-4 modal-title">Оставьте заявку и мы Вам перезвоним</h2>
-            <form class="modal-form" action="telegram.php" method="POST">
-                    <div class="d-flex justify-content-center align-items-center gap">
-                        <div class="modal-input">
-                            <label for="phone" class="form-label">Дата</label>
-                            <input name="date" type="text" id="dateInput" class="form-control" id="date" placeholder="дд.мм.гггг">
-                        </div>
-                        <div class="modal-input">
-                            <label for="phone" class="form-label">Время</label>
-                            <input name="time" type="time" class="form-control" id="time">
-                        </div>
-                    </div>
+            <form class="modal-form" action="telegram-callback.php" method="POST">
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <div class="modal-input2">
-                            <label for="name" class="form-label">Ваше имя</label>
-                            <input name="name" type="text" class="form-control" id="name">
+                            <label for="name-callback" class="form-label">Ваше имя</label>
+                            <input name="name-callback" type="text" class="form-control" id="name">
                         </div>
                         <div class="modal-input2">
-                            <label for="phone" class="form-label">Номер телефона</label>
-                            <input name="phone" type="tel" class="form-control" id="phone">
+                            <label for="phone-callback" class="form-label">Номер телефона</label>
+                            <input name="phone-callback" type="tel" class="form-control" id="phone">
                         </div>
                             <div class="main-btn main-btn-white m-0 modal-btn">Оставить заявку</div>
                         </div>
-                        <p class="modal-text">При нажатии на кнопку «Оставить заявку», Вы даете свое согласие на обработку персональных данных и принимаете условия соглашения.</p>
                     </div>
             </form>
         </div>
@@ -535,16 +524,17 @@
                             Банкротсво физ. лиц
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
-                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
-                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
-                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
-                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
-                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
-                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
-                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
-                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="podacha_na_bankrotstvo.html">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="dokumenty_dla_bankrotstva.html">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="sohranit_nedvizhymost_po_ipoteke.html">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="esli_ne_platit_za_ipoteku.html">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="stoimost_uslug_bankrotstva.html">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="kak_poishodit_bankrotstvo.html">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="procedura_besplatnogo_bankrotstva.html">Процедура бесплатного банкротства</a></li>
+                            <li><a class="dropdown-item" href="spisanie_dolgov_po_kreditam.html">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="posledstvija_procedury_bankrotstva.html">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="plusy_i_minusy.html">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -554,12 +544,12 @@
                             Кредиты и микрозаймы
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
-                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
-                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
-                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
-                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="spisat_prosrochenyj_dolg.html">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="kak_zakonno_ne_platit_kredity.html">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="bankrotstvo_v_forme_restrukturizacii.html">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="srok_iskovoi_davnosti.html">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="kreditnyje_kanikuly.html">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -569,11 +559,11 @@
                             Долги
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
-                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
-                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
-                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="dolgovaya_yama.html">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="esli_nechem_platit.html">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="tiurma_za_nevyplatu_kreditov.html">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="ugolownaya_otvetstvennost_za_neuplatu.html">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -583,8 +573,8 @@
                             Приставы и коллекторы
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
-                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="kto_takoi_sudebny_pristav.html">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="kak_rabotayut_sudebnyye_pristavy.html">Как работают судебные приставы?</a></li>
                             <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
                             <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
                             <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
@@ -593,7 +583,7 @@
                             <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
                             <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
                             <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -605,7 +595,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
                             <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -687,16 +677,17 @@
                             Банкротсво физ. лиц
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как подать на банкротсво в 2024 году?</a></li>
-                            <li><a class="dropdown-item" href="#">Документы для банкротсва граждан</a></li>
-                            <li><a class="dropdown-item" href="#">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
-                            <li><a class="dropdown-item" href="#">Что будет, если не платить ипотеку?</a></li>
-                            <li><a class="dropdown-item" href="#">Стоимость банкротсва физ. лиц</a></li>
-                            <li><a class="dropdown-item" href="#">Как происходит банкротсво физ. лиц?</a></li>
-                            <li><a class="dropdown-item" href="#">Списание долгов по кредитам при банкротсве</a></li>
-                            <li><a class="dropdown-item" href="#">Последствия процедуры банкротсва в 2024</a></li>
-                            <li><a class="dropdown-item" href="#">Плюсы и минусы банкротсва</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="podacha_na_bankrotstvo.html">Как подать на банкротсво в 2024 году?</a></li>
+                            <li><a class="dropdown-item" href="dokumenty_dla_bankrotstva.html">Документы для банкротсва граждан</a></li>
+                            <li><a class="dropdown-item" href="sohranit_nedvizhymost_po_ipoteke.html">Как сохранить недвижимость при банкротве по ипотеке?</a></li>
+                            <li><a class="dropdown-item" href="esli_ne_platit_za_ipoteku.html">Что будет, если не платить ипотеку?</a></li>
+                            <li><a class="dropdown-item" href="stoimost_uslug_bankrotstva.html">Стоимость банкротсва физ. лиц</a></li>
+                            <li><a class="dropdown-item" href="kak_poishodit_bankrotstvo.html">Как происходит банкротсво физ. лиц?</a></li>
+                            <li><a class="dropdown-item" href="procedura_besplatnogo_bankrotstva.html">Процедура бесплатного банкротства</a></li>
+                            <li><a class="dropdown-item" href="spisanie_dolgov_po_kreditam.html">Списание долгов по кредитам при банкротсве</a></li>
+                            <li><a class="dropdown-item" href="posledstvija_procedury_bankrotstva.html">Последствия процедуры банкротсва в 2024</a></li>
+                            <li><a class="dropdown-item" href="plusy_i_minusy.html">Плюсы и минусы банкротсва</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -706,12 +697,12 @@
                             Кредиты и микрозаймы
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как списать просроченый долг?</a></li>
-                            <li><a class="dropdown-item" href="#">Как законно не платить кредиты?</a></li>
-                            <li><a class="dropdown-item" href="#">Банкротсво в форме реструктуризации</a></li>
-                            <li><a class="dropdown-item" href="#">Срок исковой давности по долгам и кредиту</a></li>
-                            <li><a class="dropdown-item" href="#">Кредитные каникулы: как оформить и/или продлить?</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="spisat_prosrochenyj_dolg.html">Как списать просроченый долг?</a></li>
+                            <li><a class="dropdown-item" href="kak_zakonno_ne_platit_kredity.html">Как законно не платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="bankrotstvo_v_forme_restrukturizacii.html">Банкротсво в форме реструктуризации</a></li>
+                            <li><a class="dropdown-item" href="srok_iskovoi_davnosti.html">Срок исковой давности по долгам и кредиту</a></li>
+                            <li><a class="dropdown-item" href="kreditnyje_kanikuly.html">Кредитные каникулы: как оформить и/или продлить?</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -721,11 +712,11 @@
                             Долги
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Как избавиться от долговой ямы кредитов?</a></li>
-                            <li><a class="dropdown-item" href="#">Что делать если нечем платить кредиты?</a></li>
-                            <li><a class="dropdown-item" href="#">Тюрьма за невыплату кредитов</a></li>
-                            <li><a class="dropdown-item" href="#">Уголовная ответветственность за неуплату кредита</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="dolgovaya_yama.html">Как избавиться от долговой ямы кредитов?</a></li>
+                            <li><a class="dropdown-item" href="esli_nechem_platit.html">Что делать если нечем платить кредиты?</a></li>
+                            <li><a class="dropdown-item" href="tiurma_za_nevyplatu_kreditov.html">Тюрьма за невыплату кредитов</a></li>
+                            <li><a class="dropdown-item" href="ugolownaya_otvetstvennost_za_neuplatu.html">Уголовная ответветственность за неуплату кредита</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -735,8 +726,8 @@
                             Приставы и коллекторы
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Кто такой судебный пристав?</a></li>
-                            <li><a class="dropdown-item" href="#">Как работают судебные приставы?</a></li>
+                            <li><a class="dropdown-item" href="kto_takoi_sudebny_pristav.html">Кто такой судебный пристав?</a></li>
+                            <li><a class="dropdown-item" href="kak_rabotayut_sudebnyye_pristavy.html">Как работают судебные приставы?</a></li>
                             <li><a class="dropdown-item" href="#">Чего стоит ожидать и бояться?</a></li>
                             <li><a class="dropdown-item" href="#">Как общаться с коллекторами?</a></li>
                             <li><a class="dropdown-item" href="#">Что делать при аресте счетов приставами?</a></li>
@@ -745,7 +736,7 @@
                             <li><a class="dropdown-item" href="#">Исполнительное производтисво при банкротсве</a></li>
                             <li><a class="dropdown-item" href="#">Защита от угроз коллекторов</a></li>
                             <li><a class="dropdown-item" href="#">Что могут забрать судебные приставы при взыскании долгов?</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -757,7 +748,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Субсидиарная ответветственность и банкротсво</a></li>
                             <li><a class="dropdown-item" href="#">Процедура банкротсва ИП с долгами по налогам и кредитам в 2024</a></li>
-                            <li><a class="dropdown-item" href="#">Все статьи</a></li>
+                            <li><a class="dropdown-item" href="articles.html">Все статьи</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -888,8 +879,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1b6acda535.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/i18n/jquery.ui.datepicker-ru.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>

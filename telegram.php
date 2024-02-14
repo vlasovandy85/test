@@ -15,6 +15,7 @@ $obligations = $_POST['obligations'];
 $token = "6826186680:AAFWlSL8A8xN3n-PxmSXF_aqqhIbrBXD9NM";
 $chat_id = "-1001975915594";
 $arr = array(
+  'ТИП ЗАЯВКИ: ' => 'Заявка',
   'ФИО полььзователя: ' => $name,
   'Телефон: ' => $phone,
   'Сума долгов: ' => $sum,

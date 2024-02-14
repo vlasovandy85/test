@@ -37,29 +37,18 @@
             </div>
             <i class="fa-regular fa-circle-xmark modal-close"></i>
             <h2 class="text-center mb-4 modal-title">Оставьте заявку и мы Вам перезвоним</h2>
-            <form class="modal-form" action="telegram.php" method="POST">
-                    <div class="d-flex justify-content-center align-items-center gap">
-                        <div class="modal-input">
-                            <label for="phone" class="form-label">Дата</label>
-                            <input name="date" type="text" id="dateInput" class="form-control" id="date" placeholder="дд.мм.гггг">
-                        </div>
-                        <div class="modal-input">
-                            <label for="phone" class="form-label">Время</label>
-                            <input name="time" type="time" class="form-control" id="time">
-                        </div>
-                    </div>
+            <form class="modal-form" action="telegram-callback.php" method="POST">
                     <div class="d-flex flex-column justify-content-center align-items-center">
                         <div class="modal-input2">
-                            <label for="name" class="form-label">Ваше имя</label>
-                            <input name="name" type="text" class="form-control" id="name">
+                            <label for="name-callback" class="form-label">Ваше имя</label>
+                            <input name="name-callback" type="text" class="form-control" id="name">
                         </div>
                         <div class="modal-input2">
-                            <label for="phone" class="form-label">Номер телефона</label>
-                            <input name="phone" type="tel" class="form-control" id="phone">
+                            <label for="phone-callback" class="form-label">Номер телефона</label>
+                            <input name="phone-callback" type="tel" class="form-control" id="phone">
                         </div>
                             <div class="main-btn main-btn-white m-0 modal-btn">Оставить заявку</div>
                         </div>
-                        <p class="modal-text">При нажатии на кнопку «Оставить заявку», Вы даете свое согласие на обработку персональных данных и принимаете условия соглашения.</p>
                     </div>
             </form>
         </div>
