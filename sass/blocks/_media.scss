@@ -27,6 +27,18 @@
 }
 
 @media (max-width: 992px){
+	.article-sub {
+		&-tip {
+			&-wrapper {
+				flex-direction: column;
+				gap: 30px;
+			}
+			&-text {
+				width: 95%;
+			}
+		}
+		
+	}
 	.nav {
 		&-top {
 			display: none;
@@ -181,6 +193,29 @@
 		&-info {
 			&-item {
 				font-size: 20px;
+			}
+		}
+	}
+	.article-sub {
+		&-title {
+			font-size: 20px;
+		}
+		&-text {
+			font-size: 16px;
+		}
+		&-tip {
+			i {
+				font-size: 20px;
+			}
+			&-img {
+				width: 100px;
+				height: 100px;
+			}
+			&-title {
+				font-size: 20px;
+			}
+			&-text {
+				font-size: 14px;
 			}
 		}
 	}
