@@ -1,0 +1,142 @@
+.referal-page-main {
+    margin-top: 30px;
+    &-wrapper {
+        display: flex;
+        height: 600px;
+        background: linear-gradient(180deg, #ECE5D8 0%, #ECE5D8A3 100%);
+        border-radius: 10px;
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+        padding: 20px;
+    }
+    &-title {
+        text-align: center;
+        width: 80%;
+        font-weight: 700;
+    }
+    &-img {
+        position: absolute;
+        width: 700px;
+        right: 70px;
+        bottom: 0;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 62%;
+        margin-top: 300px;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        span {
+            display: block;
+            width: fit-content;
+            color: #E75D14;
+            background-color: #000;
+            padding: 10px 25px;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0 auto;
+        }
+    }
+}
+.referal-page-steps {
+    margin-top: 80px;
+    &-title {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    &-item {
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 15px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: #ECE5D8;
+        border-radius: 10px;
+        padding: 20px;
+        &-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: #E75D14;
+            text-align: center;
+        }
+        &-subtitle {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        &-networking, &-money {
+            width: 100px;
+            height: 100px;
+        }
+        &-recomend {
+            width: 145px;
+        }
+    }
+}
+
+.referal-page-recomendetion {
+    margin-top: 80px;
+    &-title {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    &-item {
+        display: flex;
+        background-color: #E75D14;
+        padding: 20px;
+        border-radius: 10px;
+        color: #FFF;
+        gap: 20px;
+        align-items: center;
+        width: 30%;
+        &-img {
+            width: 50px;
+            height: 50px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &-wrapper {
+            width: calc(100% - 50px);
+        }
+        &-title {
+            font-size: 25px;
+            font-weight: 900;
+        }
+    }
+}

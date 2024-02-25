@@ -24,6 +24,16 @@
 			}
 		}
 	}
+	.referal-page-main {
+		&-img {
+			right: 0;
+		}
+	}
+	.referal-page-recomendetion {
+		&-item {
+			width: calc(50% - 20px);
+		}
+	}
 }
 
 @media (max-width: 992px){
@@ -99,6 +109,30 @@
 				font-size: 20px;
 			}
 		}
+	}
+	.referal-page-main {
+		&-title {
+			font-size: 25px;
+		}
+		&-wrapper {
+			height: 420px;
+		}
+		&-img {
+			width: 500px;
+		}
+		&-about {
+			margin-top: 150px;
+			font-size: 18px;
+			span {
+				font-size: 25px;
+			}
+		}
+	}
+	.referal-page-steps {
+		margin-top: 30px;
+	}
+	.referal-page-recomendetion {
+		margin-top: 30px;
 	}
 	.footer {
 		&-wrapper {
@@ -219,6 +253,25 @@
 			}
 		}
 	}
+	.referal-page-main {
+		&-wrapper {
+			height: 330px;
+		}
+		&-img {
+			width: 400px;
+		}
+		&-about {
+			margin-top:  70px;
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+	.referal-page-recomendetion {
+		&-item {
+			width: 100%;
+		}
+	}
 	.footer {
 		&-left {
 			width: 50%;
@@ -335,6 +388,43 @@
 			}
 		}
 	}
+	.referal-page-main {
+		&-title {
+			width: 100%;
+		}
+		&-img {
+			right: 50%;
+			transform: translateX(50%);
+		}
+		&-about {
+			display: none;
+		}
+		&-wrapper {
+			height: 400px;
+			margin-top: 0;
+		}
+	}
+	.referal-page-steps {
+		&-item {
+			&-title {
+				font-size: 18px;
+			}
+			&-networking {
+				width: 60px;
+				height: 60px;
+			}
+			&-subtitle {
+				font-size: 15px;
+			}
+			&-money {
+				width: 60px;
+				height: 60px;
+			}
+			&-recomend {
+				width: 80px;
+			}
+		}
+	}
 }
 
 @media (max-width: 450px){
@@ -380,6 +470,45 @@
 		&-desc {
 			&-title {
 				font-size: 17px;
+			}
+		}
+	}
+	.referal {
+		&-title {
+			font-size: 17px;
+		}
+		&-subtitle {
+			font-size: 13px;
+		}
+		&-rub {
+			width: 100px;
+			height: 100px;
+		}
+		&-button {
+			font-size: 13px;
+		}
+	}
+}
+
+@media (max-width: 427px){
+	.referal-page-main {
+		&-title {
+			font-size: 18px;
+		}
+		&-img {
+			width: 300px;
+		}
+		&-wrapper {
+			height: 300px;
+		}
+	}
+	.referal-page-recomendetion {
+		&-item {
+			&-title {
+				font-size: 18px;
+			}
+			&-subtitle {
+				font-size: 15px;
 			}
 		}
 	}

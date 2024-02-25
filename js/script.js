@@ -116,20 +116,6 @@ function menuToggleModal() {
 
 modalClose.addEventListener('click', toggleModal);
 
-$(function() {
-  $("#dateInput").datepicker({
-      minDate: 0,
-      beforeShow: function (input, inst) {
-        inst.dpDiv.addClass('datepicker-ru');
-    },
-    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    dayNames: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-    dayNamesShort: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-    dayNamesMin: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
-    weekHeader: 'Пн',
-  });
-});
 
 const inputsArray = document.querySelectorAll ('.modal-form input'),
       modalBtn = document.querySelector ('.modal-btn');
